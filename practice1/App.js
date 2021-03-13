@@ -45,7 +45,7 @@ export default function App() {
       .then(response => {
         let threads = response.data.children
         threads = response.data.children.map(item => {
-          item.key = item.data.uri
+          item.key = item.data.url
           return item
         })
         setThreads(threads)
